@@ -1,4 +1,3 @@
-es (13 sloc)  270 Bytes
 #include <unistd.h>
 #include "main.h"
 

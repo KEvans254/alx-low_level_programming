@@ -9,7 +9,7 @@ void _puts(char *str)
 {
 	int count = 0;
 	
-	_putchar('\n')
+	_putchar('\n');
 	do
 	{
 		_putchar(str[count]);

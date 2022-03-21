@@ -1,29 +1,21 @@
-#include <stdio.h>
-/**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int nb;
+#include "main.h"
 
-	nb = _atoi("98");
-	/*nb = 1000000000;*/
-	printf("%d\n", nb);
-	nb = _atoi("-402");
-	printf("%d\n", nb);
-	nb = _atoi("          ------++++++-----+++++--98");
-	printf("%d\n", nb);
-	nb = _atoi("214748364");
-	printf("%d\n", nb);
-	nb = _atoi("0");
-	printf("%d\n", nb);
-	nb = _atoi("Suite 402");
-	printf("%d\n", nb);
-	nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-	printf("%d\n", nb);
-	nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-	printf("%d\n", nb);
-	return (0);
+/**
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
+ */
+void print_number(int n)
+{
+	unsigned int num = n;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
+
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }

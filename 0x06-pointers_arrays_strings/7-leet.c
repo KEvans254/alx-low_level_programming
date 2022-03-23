@@ -25,4 +25,5 @@ char *leet(char *s)
 		count++;
 	}
 
-	r
+	return (s);
+}
